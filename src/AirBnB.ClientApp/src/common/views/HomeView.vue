@@ -1,11 +1,14 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
-  $END$
+
+  <!-- Header-->
+  <main-header/>
+
+  <!-- Content -->
+  <locations-container/>
+
 </template>
 
-<style scoped>
-
-</style>
+<script setup lang="ts">
+import MainHeader from "@/common/components/MainHeader.vue";
+import LocationsContainer from "@/modules/locations/components/LocationsContainer.vue";
+</script>
