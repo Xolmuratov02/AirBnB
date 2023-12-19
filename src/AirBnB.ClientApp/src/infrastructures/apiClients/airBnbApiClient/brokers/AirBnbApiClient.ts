@@ -1,13 +1,13 @@
-import ApiClientBase from "/src/infrastructures/apiClients/apiClientBase/ApiClientBase";
 import { LocationEndpointsClient } from "./LocationEndpointsClient";
 import { LocationCategoriesEndpointsClients } from "./LocationCategoriesEndpointsClients";
+import ApiClientBase from "@/infrastructures/apiClients/apiClientBase/ApiClientBase";
 
 export class AirBnbApiClient {
     private readonly client: ApiClientBase;
     public readonly baseUrl: string;
 
     constructor() {
-        this.baseUrl = "https://localhost:7114";
+        this.baseUrl = "https://localhost:7198";
 
         this.client = new ApiClientBase({
             baseURL: this.baseUrl
