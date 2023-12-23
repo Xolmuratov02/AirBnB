@@ -1,18 +1,37 @@
-import type {AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse} from "axios";
+import type { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 import axios from "axios";
-import {ApiResponse} from "./ApiResponse";
-import type {ProblemDetails} from "./ProblemDetails";
+import { ApiResponse } from "@/infrastructures/apiClients/apiClientBase/ApiResponse";
+import type { ProblemDetails } from "@/infrastructures/apiClients/apiClientBase/ProblemDetails";
+import { UserInfoService } from "@/infrastructures/service/UserInfoService";
+
 
 export default class ApiClientBase {
     public readonly client: AxiosInstance;
+    public mapResponse!: <T>(response: ApiResponse<T>) => ApiResponse<T>;
 
     constructor(config: AxiosRequestConfig) {
         this.client = axios.create(config);
+        const userInfoService = new UserInfoService();
 
+        // user info interceptor
+        this.client.interceptors.request.use((config) => {
+
+            if (!userInfoService.isUserInfoSet())
+                userInfoService.set();
+
+            return config;
+        });
+
+        // register interceptors
         this.client.interceptors.response.use(<TResponse>(response: AxiosResponse<TResponse>) => {
+                let data = new ApiResponse(response.data as TResponse, null, response.status);
+
+                if (this.mapResponse != null)
+                    data = this.mapResponse(data);
+
                 return {
                     ...response,
-                    data: new ApiResponse(response.data as TResponse, null, response.status)
+                    data: data
                 }
             },
             (error: AxiosError) => {

@@ -1,24 +1,24 @@
 <template>
 
-  <!-- Locations menu -->
-  <div class="flex flex-grow md:grow-0 md:w-fit items-center pl-6 pr-2 gap-4 border border-gray-300 shadow-md rounded-full">
+  <div
+      class=" flex flex-grow md:grow-0 md:w-fit items-center pl-6 pr-2 gap-4 theme-bg-secondary theme-border theme-shadow hover-shadow rounded-full primary-transition">
 
-    <!-- Location menu detailed -->
-    <div class="h-12 hidden md:flex items-center justify-center gap-5 ">
+    <!-- Listing menu detailed -->
+    <div class="h-12 hidden md:flex items-center justify-center gap-5 theme-text-primary">
 
       <button class="text-sm font-medium line-clamp-1">
         <span class="line-clamp-1">Anywhere</span>
       </button>
 
-      <div class="border-r border-gray-300 h-3/5"></div>
+      <div class="theme-border h-3/5"></div>
 
       <button class="text-sm font-medium ">
         <span class="line-clamp-1">Any week</span>
       </button>
 
-      <div class="border-r border-gray-300 h-3/5"></div>
+      <div class="theme-border h-3/5"></div>
 
-      <button class="text-sm gap-3 flex items-center justify-center text-textSecondary">
+      <button class="text-sm gap-3 flex items-center justify-center theme-text-secondary">
                 <span class="line-clamp-1">
                     Add guests
                 </span>
@@ -36,11 +36,11 @@
       </button>
     </div>
 
-    <!-- Location menu simple -->
+    <!-- Listing menu simple -->
     <button class="md:hidden flex items-center justify-center gap-3 h-12">
 
-                <span class="h-[40px] w-[40px] flex items-center justify-center text-textPrimary">
-                    <svg class="w-[20px] h-[20px] stroke-textPrimary stroke-[5px]"
+                <span class="h-[40px] w-[40px] flex items-center justify-center">
+                    <svg class="w-[20px] h-[20px] theme-icon-primary stroke-[5px]"
                          width="20px" height="20px"
                          xmlns="http://www.w3.org/2000/svg"
                          viewBox="0 0 32 32"
@@ -53,10 +53,10 @@
                 </span>
 
       <span class="flex flex-col items-start">
-                <span class="text-sm font-medium">
+                <span class="text-sm font-medium theme-text-primary">
                     <span>Anywhere</span>
                 </span>
-                <span class="text-xs text-textSecondary">
+                <span class="flex gap-x-2 text-xs theme-text-secondary">
                     <span>Any week</span>
                     <span>•</span>
                     <span>Add guests</span>

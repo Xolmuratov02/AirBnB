@@ -3,28 +3,68 @@
 @tailwind utilities;
 
 @layer components {
-  .select-transition {
+
+  .theme-bg-primary {
+    @apply bg-bgColorPrimary dark:bg-bgColorPrimaryDark;
+  }
+
+  .theme-bg-accent {
+    @apply bg-textSecondaryDark dark:bg-borderColorDark;
+  }
+
+  .theme-bg-secondary {
+    @apply bg-bgColorSecondary dark:bg-bgColorSecondaryDark;
+  }
+
+  .theme-border {
+    @apply border border-borderColor dark:border-borderColorDark;
+  }
+
+  .theme-shadow {
+    @apply shadow-shadowColor;
+  }
+
+  .theme-text-primary {
+    @apply text-textPrimary dark:text-textPrimaryDark;
+  }
+
+  .theme-text-secondary {
+    @apply text-textSecondary dark:text-textSecondaryDark;
+  }
+
+  .theme-icon-primary {
+    @apply text-textPrimary dark:text-textPrimaryDark;
+    @apply stroke-textPrimary dark:stroke-textPrimaryDark;
+    @apply fill-textPrimary dark:fill-textPrimaryDark;
+  }
+
+  .theme-icon-secondary {
+    @apply text-textSecondary dark:text-textSecondaryDark;
+    @apply stroke-textSecondary dark:stroke-textSecondaryDark;
+    @apply fill-textSecondary dark:fill-textSecondaryDark;
+  }
+
+  /*.theme-icon {*/
+  /*    @apply text-textPrimary dark dark:text-iconPrimaryDark;*/
+  /*}*/
+  .hover-shadow {
+    @apply shadow-md hover:shadow-lg ;
+  }
+
+  .hover-shadow-zero {
+    @apply shadow-none hover:shadow-md ;
+  }
+
+  .primary-transition {
     @apply transition duration-200;
   }
 
-  .select-common {
-    @apply cursor-pointer;
+  .select-opacity {
+    @apply hover:opacity-80 focus:opacity-100 active:opacity-100 group-hover:opacity-80 group-focus:opacity-100 group-active:opacity-100;
   }
 
-  .select-logo {
-    @apply bg-logoSecondary hover:bg-logoSelected focus:bg-logoSelected active:bg-logoSelected group-hover:bg-logoSelected group-focus:bg-logoSelected group-active:bg-logoSelected;
-  }
-
-  .select-logo-img {
-    @apply opacity-60 hover:opacity-100 focus:opacity-100 active:opacity-100 group-hover:opacity-100 group-focus:opacity-100 group-active:opacity-100;
-  }
-
-  .select-item {
-    @apply bg-transparent hover:bg-logoAccent focus:bg-logoSelected group-active:bg-logoSelected group-hover:bg-logoAccent group-focus:bg-logoSelected active:bg-logoSelected;
-  }
-
-  .select-text {
-    @apply text-textSecondary hover:text-textPrimary focus:text-textPrimary active:text-textPrimary group-hover:text-textPrimary group-focus:text-textPrimary group-active:text-textPrimary;
+  .selected-opacity {
+    @apply opacity-100;
   }
 
   .content-padding {
