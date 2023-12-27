@@ -24,6 +24,9 @@ import MainHeader from "@/common/components/MainHeader.vue";
 import { AppThemeService } from "@/infrastructures/service/AppThemeService";
 import LocationsContainer from "@/modules/locations/components/ListingsContainer.vue";
 
+// import LocationsContainer from "@/modules/locations/components/ListingsContainer.vue";
+
+
 const appThemeService = new AppThemeService();
 
 </script>

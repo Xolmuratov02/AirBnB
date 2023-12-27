@@ -5,7 +5,7 @@
     <!-- Listing header -->
     <div class="w-full h-auto aspect-square rounded-xl overflow-hidden relative">
       <img class="h-full object-cover"
-           src="https://a0.muscache.com/im/pictures/c0e10c8f-d0c3-4875-bae8-0f664a55bbc6.jpg?im_w=720"
+           src="https://a0.muscache.com/im/pictures/miso/Hosting-686651688824291709/original/70fcac86-45c6-45fb-8bee-b02f7e5eefa3.jpeg?im_w=960"
            alt="">
       <button class="absolute top-4 right-4">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false"
@@ -21,10 +21,9 @@
 
       <!-- About -->
       <div class="basis-2/3">
-        <h5 class="font-medium line-clamp-1 theme-text-primary">Bujra. India Bujra. India Bujra. India Bujra. India Bujra. India Bujra. IndiaBujra.
-          IndiaBujra. India</h5>
-        <p class="theme-text-secondary">Built in 2020</p>
-        <p class="theme-text-secondary">Dec 1-6</p>
+        <h5 class="font-medium line-clamp-1 theme-text-primary">India Bujar</h5>
+        <p class="theme-text-secondary">Built in 2023</p>
+        <p class="theme-text-secondary">Dec 29-31</p>
         <h5 class="theme-text-primary">
           <strong>$1,183</strong> night
         </h5>

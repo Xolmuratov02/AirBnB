@@ -20,8 +20,8 @@ export class AppThemeService {
      */
     public toggleDarkMode(): void {
         document.body.classList.toggle("dark");
-        const dakMode= localStorage.getItem("darkMode") !== null ? localStorage.getItem("darkMode") == "true" : false;
-        localStorage.setItem("darkMode", (!dakMode).toString());
+        const darkMode= localStorage.getItem("darkMode") !== null ? localStorage.getItem("darkMode") == "true" : false;
+        localStorage.setItem("darkMode", (!darkMode).toString());
     }
 
     /**

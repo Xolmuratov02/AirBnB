@@ -21,5 +21,4 @@ export class CookieBroker {
         }
         document.cookie = `${name}=${encodeURIComponent(value)}${expires};domain=localhost;path=/`;
     }
-
 }
