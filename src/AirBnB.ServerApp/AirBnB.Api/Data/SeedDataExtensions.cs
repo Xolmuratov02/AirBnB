@@ -1,5 +1,7 @@
 ﻿using AirBnB.Domain.Entities;
 using AirBnB.Domain.Enums;
+using AirBnB.Persistence.DataContexts;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 
 namespace AirBnB.Api.Data;
