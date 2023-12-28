@@ -7,7 +7,7 @@ public static partial class HostConfiguration
         builder
             .AddSerializers()
             .AddMappers()
-            .AddCaching()
+            //.AddCaching()
             .AddBusinessLogicInfrastructure()
             .AddCorsSecurity()
             .AddRequestContextTools()

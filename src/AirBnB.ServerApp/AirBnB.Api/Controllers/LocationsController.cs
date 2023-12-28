@@ -1,4 +1,6 @@
 ﻿using AirBnB.Api.Models.Dtos;
+using AirBnB.Application.Locations.Models;
+using AirBnB.Application.Locations.Services;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 

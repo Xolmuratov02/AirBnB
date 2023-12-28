@@ -10,6 +10,7 @@
     <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="DeepCloner" Version="0.10.4" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	<FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,9 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Common\" />
-    <Folder Include="Listings\" />
-    <Folder Include="Locations\" />
+    <Folder Include="Common\Caching\" />
   </ItemGroup>
 
 </Project>

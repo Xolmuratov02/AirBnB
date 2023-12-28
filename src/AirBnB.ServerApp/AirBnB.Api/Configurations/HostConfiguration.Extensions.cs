@@ -1,9 +1,17 @@
 ﻿using AirBnB.Api.Data;
+using AirBnB.Application.Common.Serializers;
+using AirBnB.Application.Listings.Services;
+using AirBnB.Application.Locations.Services;
+using AirBnB.Application.RequestContexts.Brokers;
+using AirBnB.Infrastructure.Common.Serializers;
+using AirBnB.Infrastructure.Listings.Services;
+using AirBnB.Infrastructure.Locations.Services;
+using AirBnB.Infrastructure.RequestContexts.Brokers;
+using AirBnB.Infrastructure.StorageFiles.Settings;
 using AirBnB.Persistence.DataContexts;
 using AirBnB.Persistence.Repositories;
 using AirBnB.Persistence.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
 namespace AirBnB.Api.Configurations;
