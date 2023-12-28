@@ -1,4 +1,6 @@
-﻿namespace AirBnB.Persistence.Caching.Brokers;
+﻿using AirBnB.Persistence.Caching.Models;
+
+namespace AirBnB.Persistence.Caching.Brokers;
 
 public interface ICacheBroker
 {

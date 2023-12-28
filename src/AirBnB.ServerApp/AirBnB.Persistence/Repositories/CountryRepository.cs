@@ -7,12 +7,12 @@ using System.Linq.Expressions;
 
 namespace AirBnB.Persistence.Repositories;
 
-public class CityRepository(AppDbContext dbContext, ICacheBroker cacheBroker) : EntityRepositoryBase<City, AppDbContext>(
+public class CountryRepository(AppDbContext dbContext, ICacheBroker cacheBroker) : EntityRepositoryBase<Country, AppDbContext>(
     dbContext,
     cacheBroker,
     new CacheEntryOptions()
-), ICityRepository
+), ICountryRepository
 {
-    public new IQueryable<City> Get(Expression<Func<City, bool>>? predicate = default, bool asNoTracking = false) =>
+    public new IQueryable<Country> Get(Expression<Func<Country, bool>>? predicate = null, bool asNoTracking = false) =>
         base.Get(predicate, asNoTracking);
 }
