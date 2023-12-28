@@ -3,6 +3,7 @@ using AirBnB.Domain.Common.Query;
 using AirBnB.Domain.Exceptions;
 using AirBnB.Persistence.Caching.Brokers;
 using AirBnB.Persistence.Caching.Models;
+using AirBnB.Persistence.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Npgsql;
 using System.Linq.Expressions;
@@ -52,15 +53,6 @@ public class EntityRepositoryBase<TEntity, TContext>(TContext dbContext, ICacheB
         return initialQuery;
 
         return predicate is null ? initialQuery : initialQuery.Where(predicate);
-    }
-
-    private static async ValueTask<T?> ExecuteAsync<T>(Guid entityId, Func<Task<T?>> dataAccessFunc)
-    {
-        var result = await dataAccessFunc.GetValueAsync();
-        if (!result.IsSuccess)
-            throw MapEfCoreException(entityId, result.Exception!);
-
-        return result.Data;
     }
 
     private static Exception MapEfCoreException(Guid entityId, Exception exception)

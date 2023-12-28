@@ -25,7 +25,6 @@
 
   <ItemGroup>
     <Folder Include="EntityConfigurations\" />
-    <Folder Include="Extensions\" />
   </ItemGroup>
 
 </Project>

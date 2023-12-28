@@ -17,4 +17,10 @@
     <ProjectReference Include="..\AirBnB.Persistence\AirBnB.Persistence.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Common\" />
+    <Folder Include="Listings\" />
+    <Folder Include="Locations\" />
+  </ItemGroup>
+
 </Project>
