@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using AirBnB.Api.Models.Dtos;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AirBnB.Api.Controllers;

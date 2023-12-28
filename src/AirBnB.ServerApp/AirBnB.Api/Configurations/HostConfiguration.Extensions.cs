@@ -1,4 +1,12 @@
-﻿namespace AirBnB.Api.Configurations;
+﻿using AirBnB.Api.Data;
+using AirBnB.Persistence.DataContexts;
+using AirBnB.Persistence.Repositories;
+using AirBnB.Persistence.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
+
+namespace AirBnB.Api.Configurations;
 
 public static partial class HostConfiguration
 {
@@ -25,25 +33,25 @@ public static partial class HostConfiguration
         return builder;
     }
 
-    private static WebApplicationBuilder AddCaching(this WebApplicationBuilder builder)
-    {
-        // Register cache settings
-        builder.Services.Configure<CacheSettings>(builder.Configuration.GetSection(nameof(CacheSettings)));
+    //private static WebApplicationBuilder AddCaching(this WebApplicationBuilder builder)
+    //{
+    //    // Register cache settings
+    //    builder.Services.Configure<CacheSettings>(builder.Configuration.GetSection(nameof(CacheSettings)));
 
-        // Register redis cache
-        builder.Services.AddStackExchangeRedisCache(
-            options =>
-            {
-                options.Configuration = builder.Configuration.GetConnectionString("RedisConnectionString");
-                options.InstanceName = "Caching.SimpleInfra";
-            }
-        );
+    //    // Register redis cache
+    //    builder.Services.AddStackExchangeRedisCache(
+    //        options =>
+    //        {
+    //            options.Configuration = builder.Configuration.GetConnectionString("RedisConnectionString");
+    //            options.InstanceName = "Caching.SimpleInfra";
+    //        }
+    //    );
 
-        // Register cache broker
-        builder.Services.AddSingleton<ICacheBroker, RedisDistributedCacheBroker>();
+    //    // Register cache broker
+    //    builder.Services.AddSingleton<ICacheBroker, RedisDistributedCacheBroker>();
 
-        return builder;
-    }
+    //    return builder;
+    //}
 
     private static WebApplicationBuilder AddBusinessLogicInfrastructure(this WebApplicationBuilder builder)
     {
