@@ -1,5 +1,6 @@
 ﻿using AirBnB.Domain.Common.Entities;
 using AirBnB.Domain.Common.Query;
+using AirBnB.Domain.Exceptions;
 using AirBnB.Persistence.Caching.Brokers;
 using AirBnB.Persistence.Caching.Models;
 using Microsoft.EntityFrameworkCore;

@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore.Query;
+﻿using AirBnB.Domain.Common.Caching;
+using AirBnB.Domain.Comparers;
+using Microsoft.EntityFrameworkCore.Query;
 using System.Linq.Expressions;
 
 namespace AirBnB.Domain.Common.Query;
